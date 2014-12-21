@@ -31,4 +31,5 @@ node_modules
 .lock-wscript
 
 # Bower components
-public/components
+data/public/components
+
