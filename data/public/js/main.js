@@ -94,3 +94,5 @@ function testAPI(responseAuth) {
         });
     });
 }
+
+window.App = Ember.Application.create();

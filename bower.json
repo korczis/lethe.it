@@ -15,5 +15,16 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "ember-data": "~0.0.14",
+    "d3": "~3.5.2",
+    "socket.io-client": "~1.2.1",
+    "jquery": "~2.1.3",
+    "modernizr": "~2.8.3",
+    "handlebars": "~2.0.0"
+  },
+  "resolutions": {
+    "ember": "~1.9.1",
+    "handlebars": ">= 2.0.0 < 3.0.0"
+  }
 }
