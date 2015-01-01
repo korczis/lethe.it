@@ -28,14 +28,12 @@
     ];
 
     define(deps, function (App, ApiAdapter, Ember, DS) {
-        Ember.Application.initializer({
+        return Ember.Application.initializer({
             name: 'api-adapter',
 
             initialize: function(container, application) {
                 application.register('api-adapter:main', App.ApiAdapter);
             }
         });
-
-        return App;
     });
 })(this);
