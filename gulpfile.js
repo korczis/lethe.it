@@ -128,13 +128,22 @@
                 .pipe(clean());
         });
 
-        gulp.task('jsdoc', deps, function () {
+        gulp.task('jsdoc.client', deps, function () {
             var src = [
                 files.scripts.app[0]
             ];
             return gulp.src(src)
                 .pipe(jsdoc.parser())
                 .pipe(jsdoc.generator(files.doc.client));
+        });
+
+        gulp.task('jsdoc.server', deps, function () {
+            var src = [
+                files.scripts.app[0]
+            ];
+            return gulp.src(src)
+                .pipe(jsdoc.parser())
+                .pipe(jsdoc.generator(files.doc.server));
         });
 
         // Sass Task
@@ -244,7 +253,8 @@
             'sass',
             'scripts.bundle',
             'lint',
-            'jsdoc',
+            'jsdoc.client',
+            'jsdoc.server',
             'templates'
         ]);
 
