@@ -35,7 +35,7 @@ gulp watch
 
 ## Structure
 
-- [config](https://github.com/korczis/lethe.it/tree/master/config)
-- [lib](https://github.com/korczis/lethe.it/tree/master/lib)
-- [public](https://github.com/korczis/lethe.it/tree/master/public)
-- [tmp](https://github.com/korczis/lethe.it/tree/master/tmp)
+- [config](https://github.com/korczis/lethe.it/tree/master/config) - Global config directory
+- [lib](https://github.com/korczis/lethe.it/tree/master/lib) - Server side implementation
+- [public](https://github.com/korczis/lethe.it/tree/master/public) - Client side stuff
+- [tmp](https://github.com/korczis/lethe.it/tree/master/tmp) - Temporary director
