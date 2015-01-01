@@ -51,7 +51,7 @@
 
         shim: {
             bootstrap: {
-                deps: ['$']
+                deps: ['jquery']
             },
             ember: {
                 deps: ['jquery', 'handlebars'],

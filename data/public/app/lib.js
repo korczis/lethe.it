@@ -21,7 +21,10 @@
 (function (global) {
 
     var deps = [
-        // Core
+        // Core libraries
+        'bootstrap',
+
+        // Application
         'app',
         'router',
 
