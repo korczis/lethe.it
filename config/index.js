@@ -28,10 +28,11 @@
      * @type {Array}
      */
     var deps = [
-        'utils-merge'
+        'utils-merge',
+        './environment'
     ];
 
-    define(deps, function(merge) {
+    define(deps, function(merge, environment) {
         var appName = 'localhost:3000'; // 'lethe.it';
         var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
         var environment = process.env.NODE_ENV || 'development';
@@ -73,20 +74,14 @@
         };
 
         var environments = {
-            development: {
-
-            },
-            test: {
-
-            },
-            production: {
-
-            }
+            development: environment.development,
+            test:        environment.test,
+            production:  environment.production
         };
 
-        var config = environments[environment];
+        var config = environments[environment] || environments['development'];
 
-        var config = merge(defaultConfig, config);
+        config = merge(defaultConfig, config);
 
         module.exports = config;
     });
