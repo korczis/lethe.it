@@ -51,6 +51,8 @@
         'gulp-wrap-amd'
     ];
 
+    // TODO: Reuse config
+    // TODO: Use path.join()
     var files = {
         assets: [
             './public/assets/*.*'
