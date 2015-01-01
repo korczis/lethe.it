@@ -52,29 +52,29 @@
 
     var files = {
         assets: [
-            './data/public/assets/*.*'
+            './public/assets/*.*'
         ],
         sass: [
-            // './data/public/css/normalize.css',
-            './data/public/css/*.scss'
+            // './public/css/normalize.css',
+            './public/css/*.scss'
         ],
 
         scripts: {
             app: [
-                './data/public/app/**/*.js'
+                './public/app/**/*.js'
             ]
         },
 
         templates: [
-            './data/public/app/**/*.hbs'
+            './public/app/**/*.hbs'
         ],
 
         views: [
-            './data/views/**/*.hbs'
+            './views/**/*.hbs'
         ]
     };
 
-    var destDir = './data/public/assets';
+    var destDir = './public/assets';
 
     define(deps, function (gulp,
                            bower,
@@ -185,7 +185,7 @@
                     // handlebars: require('handlebars') // Ember >= 1.9 && Handlebars >= 2.0
                 }))
                 .pipe(wrap({
-                        src: './data/public/handlebars/template.hbs'
+                        src: './public/handlebars/template.hbs'
                     },
                     // Passed variables
                     {

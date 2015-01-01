@@ -27,17 +27,22 @@
      * Array of modules this one depends on.
      * @type {Array}
      */
-    var deps = [];
+    var deps = [
+        'utils-merge'
+    ];
 
-    define(deps, function() {
+    define(deps, function(merge) {
         var appName = 'localhost:3000'; // 'lethe.it';
         var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
+        var environment = process.env.NODE_ENV || 'development';
 
-        var config = {
+        var defaultConfig = {
             appName: appName,
             rootUrl: rootUrl,
+            environment: environment,
 
             server: {
+                port: 3000,
                 auth: {
                     facebook: {
                         appId:        process.env.FACEBOOK_APPID || '778608158855551',
@@ -66,6 +71,22 @@
                 password: 'lethe.it'
             }
         };
+
+        var environments = {
+            development: {
+
+            },
+            test: {
+
+            },
+            production: {
+
+            }
+        };
+
+        var config = environments[environment];
+
+        var config = merge(defaultConfig, config);
 
         module.exports = config;
     });
