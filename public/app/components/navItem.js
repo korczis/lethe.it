@@ -34,6 +34,6 @@
             }.property('childViews.@each.active')
         });
 
-        return App.LinkLiComponent;
+        return App.NavItemComponent;
     });
 })(this);
