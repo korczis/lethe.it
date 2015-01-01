@@ -18,18 +18,11 @@
                         Home
                     {{/link-to}}
                 {{/nav-item}}
-                {{#nav-item}}
-                    {{#link-to 'login'}}
-                        Login
-                    {{/link-to}}
-                {{/nav-item}}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">User</li>
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="https://github.com/korczis/lethe.it">github</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Developer</li>
                         <li><a href="/doc/client/index.html">Client</a></li>
@@ -38,11 +31,13 @@
                 </li>
             </ul>
 
-            <!-- ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                <li><a href="../navbar-static-top/">Static top</a></li>
-                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-            </ul -->
+            <ul class="nav navbar-nav navbar-right">
+                {{#nav-item}}
+                    {{#link-to 'login'}}
+                        Login
+                    {{/link-to}}
+                {{/nav-item}}
+            </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
 </nav>
