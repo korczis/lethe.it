@@ -30,8 +30,8 @@
     var deps = [];
 
     define(deps, function() {
-        var appName = 'lethe.it';
-        var rootUrl = process.env.ROOT_URL | 'https://' + appName + '/';
+        var appName = 'localhost:3000'; // 'lethe.it';
+        var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
 
         var config = {
             appName: appName,
@@ -43,7 +43,7 @@
                         appId:        process.env.FACEBOOK_APPID || '778608158855551',
                         appSecret:    process.env.FACEBOOK_APPSECRET || '03fa4c0d237ceb18908a6e6226d7a1dd',
                         appNamespace: process.env.FACEBOOK_APPNAMESPACE || 'lethe-it',
-                        redirectUri:  process.env.FACEBOOK_REDIRECTURI || rootUrl + 'login/callback',
+                        redirectUri:  process.env.FACEBOOK_REDIRECTURI || rootUrl + 'auth/facebook/callback',
                         scope:        'email'
                     },
 
