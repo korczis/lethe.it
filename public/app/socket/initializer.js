@@ -26,14 +26,12 @@
     ];
 
     define(deps, function (App, Socket) {
-        Ember.Application.initializer({
+        return Ember.Application.initializer({
             name: 'socket',
 
             initialize: function(container, application) {
                 application.set('sockets', Socket());
             }
         });
-
-        return App;
     });
 })(this);
