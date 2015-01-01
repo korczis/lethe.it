@@ -56,7 +56,6 @@
             './public/assets/*.*'
         ],
         sass: [
-            // './public/css/normalize.css',
             './public/css/*.scss'
         ],
 
@@ -146,9 +145,9 @@
             return gulp.src(src)
                 .pipe(sourcemaps.init())
                 .pipe(sass())
+                .pipe(concat('bundle.css'))
                 .pipe(cssshrink())
                 .pipe(sourcemaps.write())
-                .pipe(rename('bundle.css'))
                 .pipe(gulp.dest(destDir));
         });
 
