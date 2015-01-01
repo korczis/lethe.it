@@ -35,7 +35,7 @@ gulp watch
 
 ## Structure
 
-- config
-- lib
-- public
-- tmp
+- [config](https://github.com/korczis/lethe.it/tree/master/config)
+- [lib](https://github.com/korczis/lethe.it/tree/master/lib)
+- [public](https://github.com/korczis/lethe.it/tree/master/public)
+- [tmp](https://github.com/korczis/lethe.it/tree/master/tmp)
