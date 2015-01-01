@@ -38,6 +38,7 @@
         'gulp-cssshrink',
         'gulp-filesize',
         'gulp-handlebars',
+        'gulp-jsdoc',
         'gulp-jshint',
         'gulp-livereload',
         'gulp-rename',
@@ -71,7 +72,11 @@
 
         views: [
             './views/**/*.hbs'
-        ]
+        ],
+        doc: {
+            client: './public/doc/client',
+            server: './public/doc/server'
+        }
     };
 
     var destDir = './public/assets';
@@ -84,6 +89,7 @@
                            cssshrink,
                            filesize,
                            handlebars,
+                           jsdoc,
                            jshint,
                            livereload,
                            rename,
@@ -119,6 +125,15 @@
             var src = files.assets;
             return gulp.src(src)
                 .pipe(clean());
+        });
+
+        gulp.task('jsdoc', deps, function () {
+            var src = [
+                files.scripts.app[0]
+            ];
+            return gulp.src(src)
+                .pipe(jsdoc.parser())
+                .pipe(jsdoc.generator(files.doc.client));
         });
 
         // Sass Task
@@ -211,6 +226,7 @@
         gulp.task('watch', function () {
             livereload.listen();
 
+            // TODO: Automatically populate all files
             gulp.watch([
                 files.sass[0],
                 files.scripts.app[0],
@@ -227,6 +243,7 @@
             'sass',
             'scripts.bundle',
             'lint',
+            'jsdoc',
             'templates'
         ]);
 
