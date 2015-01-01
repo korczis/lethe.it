@@ -21,42 +21,19 @@
 (function (global) {
 
     var deps = [
-        // Core libraries
-        'bootstrap',
-
-        // Application
         'app',
-        'router',
-
-        // REST API Adapter
-        'api/adapter',
-        'api/initializer',
-        'api/store',
-
-        // Ember Components
-        'components/navItem',
-
-        // Ember Extensions
-        'extensions/linkView',
-
-        // Socket.io
-        'socket/initializer',
-
-        // Models
-        'models/user',
-
-        // Routes
-        'routes/applicationController',
-        'routes/applicationRoute',
-
-        'routes/indexController',
-        'routes/indexRoute',
-
-        'routes/login/loginRoute',
-        'routes/login/loginView'
+        'ember'
     ];
 
-    define(deps, function () {
-        return deps;
+    define(deps, function (App, Ember) {
+        App.NavItemComponent = Ember.Component.extend({
+            tagName: 'li',
+            classNameBindings: ['active'],
+            active: function() {
+                return this.get('childViews').anyBy('active');
+            }.property('childViews.@each.active')
+        });
+
+        return App.LinkLiComponent;
     });
 })(this);
