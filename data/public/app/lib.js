@@ -21,6 +21,9 @@
 (function (global) {
 
     var deps = [
+        // Core compatibility
+        'plugins',
+        
         // Core libraries
         'bootstrap',
 
