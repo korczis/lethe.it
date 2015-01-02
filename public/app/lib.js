@@ -64,6 +64,9 @@
         'routes/privacy/privacyRoute',
         'routes/privacy/privacyView',
 
+        'routes/stream/streamRoute',
+        'routes/stream/streamView',
+        
         'routes/tos/tosRoute',
         'routes/tos/tosView'
     ];

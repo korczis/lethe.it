@@ -29,6 +29,7 @@
             this.route('contact', { path: '/contact' });
             this.route('login', { path: '/login' });
             this.route('privacy', { path: '/privacy' });
+            this.route('stream', { path: '/stream' });
             this.route('tos', { path: '/tos' });
         });
 
