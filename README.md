@@ -37,7 +37,13 @@ gulp watch
 
 - [config](https://github.com/korczis/lethe.it/tree/master/config) - Global config directory
 - [lib](https://github.com/korczis/lethe.it/tree/master/lib) - Server side implementation
-  
+  - [app](https://github.com/korczis/lethe.it/tree/master/lib/app) - Server Application
+  - [connectors](https://github.com/korczis/lethe.it/tree/master/lib/connectors) - Social Network Connectors
+  - [helpers](https://github.com/korczis/lethe.it/tree/master/lib/helpers) - Various Helpers
+  - [logger](https://github.com/korczis/lethe.it/tree/master/lib/logger) - Server side logger
+  - [persistence](https://github.com/korczis/lethe.it/tree/master/lib/persistence) - Persistence Abstraction Layer
+  - [processor](https://github.com/korczis/lethe.it/tree/master/lib/processor) - Generic Processor
+  - [web](https://github.com/korczis/lethe.it/tree/master/lib/web) - Web Interface Implementation
 - [public](https://github.com/korczis/lethe.it/tree/master/public) - Client side stuff
   - [app](https://github.com/korczis/lethe.it/tree/master/public/app) - Application
   - [assets](https://github.com/korczis/lethe.it/tree/master/public/assets) - Compiled Assets
