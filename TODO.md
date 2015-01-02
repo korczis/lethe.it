@@ -1,10 +1,6 @@
 # TODO
 
-- CLI
-- Express
-- Html boilerplate
-- FB/Twitter Integration
-- DB connection
-- Config
-- Travis
-- FTS - Solr/Elastic
+- Merging config environments
+- Passing config to client
+- Auth - Facebook, Twitter
+- JSDoc

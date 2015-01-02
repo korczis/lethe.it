@@ -29,6 +29,6 @@
         App.LoginRoute = Ember.Route.extend({
         });
 
-        return App;
+        return App.LoginRoute;
     });
 })(this);
