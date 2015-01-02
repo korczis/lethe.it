@@ -56,7 +56,13 @@
         'routes/indexRoute',
 
         'routes/login/loginRoute',
-        'routes/login/loginView'
+        'routes/login/loginView',
+
+        'routes/privacy/privacyRoute',
+        'routes/privacy/privacyView',
+
+        'routes/tos/tosRoute',
+        'routes/tos/tosView'
     ];
 
     define(deps, function () {
