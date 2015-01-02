@@ -49,6 +49,9 @@
         'models/user',
 
         // Routes
+        'routes/contact/contactRoute',
+        'routes/contact/contactView',
+
         'routes/applicationController',
         'routes/applicationRoute',
 
