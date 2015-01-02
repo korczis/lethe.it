@@ -27,6 +27,8 @@
     define(deps, function (App) {
         App.Router.map(function() {
             this.route("login", { path: "/login" });
+            this.route("privacy", { path: "/privacy" });
+            this.route("tos", { path: "/tos" });
         });
 
         return App;
