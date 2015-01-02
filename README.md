@@ -37,5 +37,14 @@ gulp watch
 
 - [config](https://github.com/korczis/lethe.it/tree/master/config) - Global config directory
 - [lib](https://github.com/korczis/lethe.it/tree/master/lib) - Server side implementation
+  
 - [public](https://github.com/korczis/lethe.it/tree/master/public) - Client side stuff
+  - [app](https://github.com/korczis/lethe.it/tree/master/public/app) - Application
+  - [assets](https://github.com/korczis/lethe.it/tree/master/public/assets) - Compiled Assets
+  - [css](https://github.com/korczis/lethe.it/tree/master/public/css) - Source CSS
+  - [doc](https://github.com/korczis/lethe.it/tree/master/public/doc) - Generated Documentation
+  - [handlebars](https://github.com/korczis/lethe.it/tree/master/public/handlebars) - Handlebars Convertors
+  - [img](https://github.com/korczis/lethe.it/tree/master/public/img) - Public Images
+  - [js](https://github.com/korczis/lethe.it/tree/master/public/js) - Public JavaScripts
+  - [views](https://github.com/korczis/lethe.it/tree/master/public/views) - Server side views
 - [tmp](https://github.com/korczis/lethe.it/tree/master/tmp) - Temporary director
