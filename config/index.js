@@ -68,6 +68,16 @@
 
             couchdb: {
                 host: 'localhost',
+                port: 5984,
+                db: 'lethe-it',
+                username: 'lethe.it',
+                password: 'lethe.it'
+            },
+
+            mongo: {
+                host: 'localhost',
+                port: 27017,
+                db: 'lethe-it',
                 username: 'lethe.it',
                 password: 'lethe.it'
             }
