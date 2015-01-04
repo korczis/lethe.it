@@ -27,9 +27,7 @@
      * Array of modules this one depends on.
      * @type {Array}
      */
-    var deps = [
-        'utils-merge'
-    ];
+    var deps = [];
 
     define(deps, function(merge) {
         var config = {

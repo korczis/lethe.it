@@ -27,16 +27,17 @@
      * Array of modules this one depends on.
      * @type {Array}
      */
-    var deps = [
-        'utils-merge'
-    ];
+    var deps = [];
 
-    var appName = process.env.NODE_HOST_LETHE_IT || 'localhost:3000';
+    var appHostname = 'localhost';
+    var appPort = 3000;
+
+    var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
 
     var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
     var environment = process.env.NODE_ENV || 'development';
 
-    define(deps, function(merge) {
+    define(deps, function() {
         var config = {
             appName: appName,
             rootUrl: rootUrl,

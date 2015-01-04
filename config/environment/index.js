@@ -40,6 +40,7 @@
     ];
 
     define(deps, function(merge, defaultEnv, development, test, production) {
+        // TODO: Initialize environments automatically using /lethe.it/config/environemnt/**/*.js listing
         var env = {
             // Default environment
             defaultEnv: defaultEnv,

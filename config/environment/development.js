@@ -27,11 +27,9 @@
      * Array of modules this one depends on.
      * @type {Array}
      */
-    var deps = [
-        'utils-merge'
-    ];
+    var deps = [];
 
-    define(deps, function(merge) {
+    define(deps, function() {
         var config = {
             couchdb: {
                 db: 'lethe-it-development'
