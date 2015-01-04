@@ -33,7 +33,15 @@
 
     define(deps, function(merge) {
         var config = {
+            // appName: 'lethe.it',
 
+            couchdb: {
+                db: 'lethe-it-production'
+            },
+
+            mongo: {
+                db: 'lethe-it-production'
+            }
         };
 
         module.exports = config;

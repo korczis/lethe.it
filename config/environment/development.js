@@ -33,7 +33,13 @@
 
     define(deps, function(merge) {
         var config = {
+            couchdb: {
+                db: 'lethe-it-development'
+            },
 
+            mongo: {
+                db: 'lethe-it-development'
+            }
         };
 
         module.exports = config;
