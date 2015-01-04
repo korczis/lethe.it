@@ -33,55 +33,7 @@
     ];
 
     define(deps, function(merge, environment) {
-        var appName = 'localhost:3000'; // 'lethe.it';
-        var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
-        var environment = process.env.NODE_ENV || 'development';
-
-        var defaultConfig = {
-            appName: appName,
-            rootUrl: rootUrl,
-            environment: environment,
-
-            server: {
-                port: 3000,
-                auth: {
-                    facebook: {
-                        appId:        process.env.FACEBOOK_APPID || '778608158855551',
-                        appSecret:    process.env.FACEBOOK_APPSECRET || '03fa4c0d237ceb18908a6e6226d7a1dd',
-                        appNamespace: process.env.FACEBOOK_APPNAMESPACE || 'lethe-it',
-                        redirectUri:  process.env.FACEBOOK_REDIRECTURI || rootUrl + 'auth/facebook/callback',
-                        scope:        'email'
-                    },
-
-                    twitter: {
-                        apiKey:    process.env.TWITTER_KEY || 'IsAyXNYEIQrqqXQdP5dksYdLS',
-                        apiSecret: process.env.TWITTER_SECRET || 'QKz3pqFceHRTyTKfPSoYRZd6QFWFGqo6M1X8z5grT1iZbdKa6z'
-                    }
-                },
-                session: {
-                    secret: 'secret',
-                    store: {
-                        name: 'lethe-it-sessions'
-                    }
-                }
-            },
-
-            couchdb: {
-                host: 'localhost',
-                port: 5984,
-                db: 'lethe-it',
-                username: 'lethe.it',
-                password: 'lethe.it'
-            },
-
-            mongo: {
-                host: 'localhost',
-                port: 27017,
-                db: 'lethe-it',
-                username: 'lethe.it',
-                password: 'lethe.it'
-            }
-        };
+        var defaultConfig = environment.defaultEnv;
 
         var environments = {
             development: environment.development,

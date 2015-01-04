@@ -29,13 +29,22 @@
      */
     var deps = [
         'utils-merge',
+
+        // Default environment
+        './defaultEnv',
+
+        // Specific environment(s)
         './development',
         './test',
         './production'
     ];
 
-    define(deps, function(merge, development, test, production) {
+    define(deps, function(merge, defaultEnv, development, test, production) {
         var env = {
+            // Default environment
+            defaultEnv: defaultEnv,
+
+            // Specific environment(s)
             development: development,
             test: test,
             production: production
