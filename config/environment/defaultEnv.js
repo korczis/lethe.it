@@ -56,6 +56,11 @@
                         ]
                     },
 
+                    github: {
+                        appId:        process.env.GITHUB_APPID || '5dc2f2f8767347e7fc08',
+                        appSecret:    process.env.GITHUB_APPSECRET || '935ea04ccdecf4a1f50a3d4263254195f35312f8'
+                    },
+
                     twitter: {
                         apiKey:    process.env.TWITTER_KEY || 'IsAyXNYEIQrqqXQdP5dksYdLS',
                         apiSecret: process.env.TWITTER_SECRET || 'QKz3pqFceHRTyTKfPSoYRZd6QFWFGqo6M1X8z5grT1iZbdKa6z'
