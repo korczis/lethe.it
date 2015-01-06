@@ -31,6 +31,20 @@
 
     define(deps, function() {
         var config = {
+            server: {
+                port: 3000,
+                auth: {
+                    github: {
+                        appId:       'ecc32a0a8a687670746d',
+                        appSecret:   '6278ab66e1546535b22815580227fb979ad9eb87',
+                        scope:        [
+                            'user',
+                            'repo'
+                        ]
+                    }
+                }
+            },
+
             couchdb: {
                 db: 'lethe-it-development'
             },
