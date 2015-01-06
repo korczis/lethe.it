@@ -28,7 +28,7 @@
      * @type {Array}
      */
     var deps = [
-        'utils-merge',
+        'node.extend',
         './environment'
     ];
 
@@ -41,10 +41,12 @@
             production:  environment.production
         };
 
-        var config = environments[process.env.NODE_ENV] || environments['development'];
+        var selectedConfig = environments[process.env.NODE_ENV] || environments.development;
 
-        config = merge(defaultConfig, config);
+        var config = merge(true, defaultConfig, selectedConfig);
 
         module.exports = config;
+
+        return defaultConfig;
     });
 }());
