@@ -45,7 +45,8 @@
 
                     twitter: {
                         apiKey:    'ucNuJt3Dz2A6VuyBjp9pSFwL0',
-                        apiSecret: 'p05x1yli4Rz3wxGJKHLq454eh2fvsyc3y2yYUc9Yb2XQr0akyE'
+                        apiSecret: 'p05x1yli4Rz3wxGJKHLq454eh2fvsyc3y2yYUc9Yb2XQr0akyE',
+                        redirectUri: 'http://localhost:3000/auth/twitter/callback'
                     }
                 }
             },
