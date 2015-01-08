@@ -48,7 +48,7 @@
         console.log(JSON.stringify(config, null, 4));
 
         module.exports = config;
-qq
+
         return defaultConfig;
     });
 }());
