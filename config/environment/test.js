@@ -30,7 +30,7 @@
     var deps = [];
     define(deps, function(merge) {
         var appHostname = 'test.lethe.it';
-        var appPort = 3000;
+        var appPort = 80;
 
         var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
         var rootUrl = process.env.ROOT_URL || 'https://' + appName + '/';
@@ -43,6 +43,10 @@
             appPort: appPort,
             rootUrl: rootUrl,
             environment: environment,
+
+            server: {
+                port: appPort
+            },
 
             couchdb: {
                 db: 'lethe-it-test'

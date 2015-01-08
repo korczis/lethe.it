@@ -46,7 +46,7 @@
             environment: environment,
 
             server: {
-                port: 3000,
+                port: appPort,
                 auth: {
                     //*
                     github: {

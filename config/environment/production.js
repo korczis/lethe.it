@@ -30,7 +30,7 @@
     var deps = [];
     define(deps, function(merge) {
         var appHostname = 'lethe.it';
-        var appPort = 3000;
+        var appPort = 80;
 
         var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
         var rootUrl = process.env.ROOT_URL || 'https://' + appName + '/';
@@ -45,7 +45,7 @@
             environment: environment,
 
             server: {
-                port: 3000,
+                port: appPort,
                 auth: {
                     //*
                     github: {
