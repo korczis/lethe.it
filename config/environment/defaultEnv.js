@@ -29,22 +29,24 @@
      */
     var deps = [];
 
-    var appHostname = 'localhost';
-    var appPort = 3000;
-
-    var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
-
-    var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
-    var environment = process.env.NODE_ENV || 'development';
-
     define(deps, function() {
+        var appHostname = 'localhost';
+        var appPort = 3000;
+
+        var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
+        var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
+
+        var environment = process.env.NODE_ENV || 'development';
+
         var config = {
+            appHostname: appHostname,
             appName: appName,
+            appPort: appPort,
             rootUrl: rootUrl,
             environment: environment,
 
             server: {
-                port: 3000,
+                port: 80,
                 auth: {
                     facebook: {
                         appId:        process.env.FACEBOOK_APPID || '778608158855551',
@@ -66,12 +68,12 @@
                         ]
                     },
 
+                    // https://apps.twitter.com/
                     twitter: {
                         apiKey:    process.env.TWITTER_KEY || 'IsAyXNYEIQrqqXQdP5dksYdLS',
                         apiSecret: process.env.TWITTER_SECRET || 'QKz3pqFceHRTyTKfPSoYRZd6QFWFGqo6M1X8z5grT1iZbdKa6z',
                         redirectUri:  process.env.TWITTER_REDIRECTURI || rootUrl + 'auth/twitter/callback',
                         scope: [
-
                         ]
                     }
                 },

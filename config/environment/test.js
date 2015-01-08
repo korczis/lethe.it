@@ -28,9 +28,22 @@
      * @type {Array}
      */
     var deps = [];
-
     define(deps, function(merge) {
+        var appHostname = 'test.lethe.it';
+        var appPort = 3000;
+
+        var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
+        var rootUrl = process.env.ROOT_URL || 'https://' + appName + '/';
+
+        var environment = process.env.NODE_ENV || 'test';
+
         var config = {
+            appHostname: appHostname,
+            appName: appName,
+            appPort: appPort,
+            rootUrl: rootUrl,
+            environment: environment,
+
             couchdb: {
                 db: 'lethe-it-test'
             },

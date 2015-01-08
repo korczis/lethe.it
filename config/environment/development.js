@@ -30,10 +30,25 @@
     var deps = [];
 
     define(deps, function() {
+        var appHostname = 'localhost';
+        var appPort = 3000;
+
+        var appName = process.env.NODE_HOST_LETHE_IT || (appHostname + ':' +  appPort);
+        var rootUrl = process.env.ROOT_URL || 'http://' + appName + '/';
+
+        var environment = process.env.NODE_ENV || 'development';
+
         var config = {
+            appHostname: appHostname,
+            appName: appName,
+            appPort: appPort,
+            rootUrl: rootUrl,
+            environment: environment,
+
             server: {
                 port: 3000,
                 auth: {
+                    //*
                     github: {
                         appId:       'ecc32a0a8a687670746d',
                         appSecret:   '6278ab66e1546535b22815580227fb979ad9eb87',
@@ -45,9 +60,9 @@
 
                     twitter: {
                         apiKey:    'ucNuJt3Dz2A6VuyBjp9pSFwL0',
-                        apiSecret: 'p05x1yli4Rz3wxGJKHLq454eh2fvsyc3y2yYUc9Yb2XQr0akyE',
-                        redirectUri: 'http://localhost:3000/auth/twitter/callback'
+                        apiSecret: 'p05x1yli4Rz3wxGJKHLq454eh2fvsyc3y2yYUc9Yb2XQr0akyE'
                     }
+                   //*/
                 }
             },
 
