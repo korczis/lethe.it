@@ -49,8 +49,8 @@
                 auth: {
                     //*
                     github: {
-                        appId: 'ecc32a0a8a687670746d',
-                        appSecret: '6278ab66e1546535b22815580227fb979ad9eb87',
+                        appId: '5dc2f2f8767347e7fc08',
+                        appSecret: '935ea04ccdecf4a1f50a3d4263254195f35312f8',
                         redirectUri:  process.env.GITHUB_REDIRECTURI || rootUrl + 'auth/github/callback',
                         scope: [
                             'user',
