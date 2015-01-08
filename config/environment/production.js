@@ -59,8 +59,8 @@
                     },
 
                     twitter: {
-                        apiKey: 'ucNuJt3Dz2A6VuyBjp9pSFwL0',
-                        apiSecret: 'p05x1yli4Rz3wxGJKHLq454eh2fvsyc3y2yYUc9Yb2XQr0akyE',
+                        apiKey: 'IsAyXNYEIQrqqXQdP5dksYdLS',
+                        apiSecret: 'QKz3pqFceHRTyTKfPSoYRZd6QFWFGqo6M1X8z5grT1iZbdKa6z',
                         redirectUri:  process.env.TWITTER_REDIRECTURI || rootUrl + 'auth/twitter/callback'
                     }
                     //*/
