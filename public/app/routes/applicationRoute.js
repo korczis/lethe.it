@@ -32,6 +32,7 @@
             },
 
             beforeModel: function() {
+                // TODO: GET /user/current
                 // this.transitionTo('login');
             },
 
