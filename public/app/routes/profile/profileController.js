@@ -27,7 +27,11 @@
 
     define(deps, function (Ember, App) {
         App.ProfileController = Ember.Controller.extend({
-            user: null
+            needs: ['auth'],
+
+            user: function() {
+                return this.get('controllers.auth.user');
+            }.property('controllers.auth.user')
         });
 
 

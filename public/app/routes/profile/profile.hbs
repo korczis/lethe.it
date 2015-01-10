@@ -1,3 +1,21 @@
-<div class="row text-center">
-    <h1>Profile</h1>
+<div class="row">
+    <div class="container">
+        {{#if user.facebook}}
+            <div class="well">
+                <h2><a target="_blank" {{bind-attr href=user.facebook.uri}}> Facebook </a></h2>
+            </div>
+        {{/if}}
+
+        {{#if user.github}}
+            <div class="well">
+                <h2><a target="_blank" {{bind-attr href=user.github.uri}}> Github </a></h2>
+            </div>
+        {{/if}}
+
+        {{#if user.twitter}}
+            <div class="well">
+                <h2><a target="_blank" {{bind-attr href=user.twitter.uri}}> Twitter </a></h2>
+            </div>
+        {{/if}}
+    </div>
 </div>
