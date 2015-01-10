@@ -2,19 +2,19 @@
     <div class="container">
         {{#if user.facebook}}
             <div class="well">
-                <h2><img {{bind-attr src=user.facebook.img}} height="50" width="50" /><a target="_blank" {{bind-attr href=user.facebook.uri}}> Facebook </a></h2>
+                <h2><a target="_blank" {{bind-attr href=user.facebook.uri}}><img {{bind-attr src=user.facebook.img}} height="50" width="50" /> Facebook </a></h2>
             </div>
         {{/if}}
 
         {{#if user.github}}
             <div class="well">
-                <h2><img {{bind-attr src=user.github.img}}  height="50" width="50" /><a target="_blank" {{bind-attr href=user.github.uri}}> Github </a></h2>
+                <h2><a target="_blank" {{bind-attr href=user.github.uri}}><img {{bind-attr src=user.github.img}}  height="50" width="50" /> Github </a></h2>
             </div>
         {{/if}}
 
         {{#if user.twitter}}
             <div class="well">
-                <h2><img {{bind-attr src=user.twitter.img}} height="50" width="50" /><a target="_blank" {{bind-attr href=user.twitter.uri}}> Twitter </a></h2>
+                <h2><a target="_blank" {{bind-attr href=user.twitter.uri}}><img {{bind-attr src=user.twitter.img}} height="50" width="50" /> Twitter </a></h2>
             </div>
         {{/if}}
     </div>
