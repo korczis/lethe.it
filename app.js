@@ -35,7 +35,14 @@
         var Lethe = require('./lib');
 
         var app = new Lethe.App();
-        app.run();
+        app.init().then(function() {
+            app.run();
+        }, function(err) {
+            console.dir(err);
+            throw err;
+        }, function(res) {
+            return res;
+        });
     });
 
 }());
