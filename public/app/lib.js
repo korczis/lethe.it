@@ -49,6 +49,10 @@
         'models/user',
 
         // Routes
+        'routes/auth/authController',
+        'routes/auth/authRoute',
+        'routes/auth/authView',
+
         'routes/contact/contactRoute',
         'routes/contact/contactView',
 
@@ -57,9 +61,6 @@
 
         'routes/indexController',
         'routes/indexRoute',
-
-        'routes/login/loginRoute',
-        'routes/login/loginView',
 
         'routes/privacy/privacyRoute',
         'routes/privacy/privacyView',

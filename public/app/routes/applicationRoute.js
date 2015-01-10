@@ -38,9 +38,13 @@
                         },
                         success: function (data, status, xhr) {
                             if(data && data.user && data.user.id != 'guest') {
-                                resolve(self.store.find('user', data.user.id));
+                                var user = self.store.find('user', data.user.id);
+                                self.controllerFor('auth').set('user', user);
+                                return resolve(user);
                             }
-                            resolve(null);
+
+                            self.controllerFor('auth').set('user', null);
+                            return resolve(null);
                         },
                         dataType: 'json'
                     });
@@ -50,6 +54,10 @@
             beforeModel: function() {
                 // TODO: GET /user/current
                 // this.transitionTo('login');
+
+                // if (!this.controllerFor('login').get('isLoggedIn')) {
+                //    this.transitionTo('login');
+                // }
             },
 
             // The code below is the default behavior, so if this is all you

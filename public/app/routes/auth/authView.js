@@ -26,8 +26,8 @@
     ];
 
     define(deps, function (Ember, App) {
-        App.LoginView = Ember.View.extend({
-            templateName: 'login/login'
+        App.AuthView = Ember.View.extend({
+            templateName: 'auth/auth'
         });
 
         return App;

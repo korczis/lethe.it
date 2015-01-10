@@ -28,11 +28,28 @@
     ];
 
     define(deps, function (App, ApiAdapter, Ember, DS) {
-        return Ember.Application.initializer({
+        Ember.Application.initializer({
             name: 'api-adapter',
 
             initialize: function(container, application) {
                 application.register('api-adapter:main', App.ApiAdapter);
+            }
+        });
+
+        App.RawTransform = DS.Transform.extend({
+            deserialize: function(serialized) {
+                return serialized;
+            },
+            serialize: function(deserialized) {
+                return deserialized;
+            }
+        });
+
+        App.initializer({
+            name: "raw-transform",
+
+            initialize: function(container, application) {
+                application.register('transform:raw', App.RawTransform);
             }
         });
     });

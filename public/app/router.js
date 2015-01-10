@@ -27,7 +27,7 @@
     define(deps, function (App) {
         App.Router.map(function() {
             this.route('contact', { path: '/contact' });
-            this.route('login', { path: '/login' });
+            this.route('auth', { path: '/auth' });
             this.route('privacy', { path: '/privacy' });
             this.route('stream', { path: '/stream' });
             this.route('tos', { path: '/tos' });

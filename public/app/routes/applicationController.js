@@ -27,7 +27,11 @@
 
     define(deps, function (Ember, App) {
         App.ApplicationController = Ember.Controller.extend({
+            needs: ['auth'],
 
+            user: function() {
+                return self.controllerFor('auth').get('user');
+            }.property()
         });
 
         return App.ApplicationController;

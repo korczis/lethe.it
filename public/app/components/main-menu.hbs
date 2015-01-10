@@ -51,15 +51,17 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                {{#nav-item}}
-                    {{#link-to 'login'}}
-                        Login
-                    {{/link-to}}
-                {{/nav-item}}
-
-                {{#nav-item}}
-                    <a href="/logout">Logout</a>
-                {{/nav-item}}
+                {{#if user}}
+                    {{#nav-item}}
+                        <a href="/logout">Logout</a>
+                    {{/nav-item}}
+                {{else}}
+                    {{#nav-item}}
+                        {{#link-to 'auth'}}
+                            Login
+                        {{/link-to}}
+                    {{/nav-item}}
+                {{/if}}
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->

@@ -21,19 +21,16 @@
 (function (global) {
 
     var deps = [
-        'app',
-        'ember-data'
+        'ember',
+        'app'
     ];
 
-    define(deps, function (App, DS) {
-        var attr = DS.attr;
-
-        App.User = DS.Model.extend({
-            name: attr(),
-            facebook: attr('raw'),
-            github: attr('raw'),
-            twitter: attr('raw')
+    define(deps, function (Ember, App) {
+        App.AuthController = Ember.Controller.extend({
+            user: null
         });
 
+
+        return App.AuthController;
     });
 })(this);

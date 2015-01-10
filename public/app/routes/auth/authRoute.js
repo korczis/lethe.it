@@ -26,9 +26,9 @@
     ];
 
     define(deps, function (Ember, App) {
-        App.LoginRoute = Ember.Route.extend({
+        App.AuthRoute = Ember.Route.extend({
         });
 
-        return App.LoginRoute;
+        return App.AuthRoute;
     });
 })(this);
