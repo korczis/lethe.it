@@ -22,13 +22,29 @@
 
     var deps = [
         'ember',
-        'app'
+        'app',
+        'jquery'
     ];
 
-    define(deps, function (Ember, App) {
+    define(deps, function (Ember, App, $) {
         App.ApplicationRoute = Ember.Route.extend({
             model: function () {
-                return this.store.find('user', 'current');
+                var self = this;
+                return new Ember.RSVP.Promise(function(resolve, reject) {
+                    $.ajax({
+                        url: '/users/current',
+                        error: function (xhr, status, error) {
+                            reject(error);
+                        },
+                        success: function (data, status, xhr) {
+                            if(data && data.user && data.user.id != 'guest') {
+                                resolve(self.store.find('user', data.user.id));
+                            }
+                            resolve(null);
+                        },
+                        dataType: 'json'
+                    });
+                });
             },
 
             beforeModel: function() {
