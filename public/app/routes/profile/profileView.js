@@ -21,19 +21,15 @@
 (function (global) {
 
     var deps = [
+        'ember',
         'app'
     ];
 
-    define(deps, function (App) {
-        App.Router.map(function() {
-            this.route('contact', { path: '/contact' });
-            this.route('auth', { path: '/auth' });
-            this.route('profile', { path: '/profile' });
-            this.route('privacy', { path: '/privacy' });
-            this.route('stream', { path: '/stream' });
-            this.route('tos', { path: '/tos' });
+    define(deps, function (Ember, App) {
+        App.ProfileView = Ember.View.extend({
+            templateName: 'profile/profile'
         });
 
-        return App;
+        return App.ProfileView;
     });
 })(this);

@@ -3,7 +3,15 @@
     <div class="container">
         <h1>{{#link-to 'index'}}lethe.it{{/link-to}}</h1>
         <p>Search, categorize, classify your social network activity.</p>
-        <p>{{#link-to 'auth' class="btn btn-primary btn-lg" role="button"}}Login or Sign-up &raquo;{{/link-to}}</p>
+        <p>
+            {{#link-to 'auth' class="btn btn-primary btn-lg" role="button"}}
+                {{#if controllers.application.user}}
+                    Link Accounts &raquo;
+                {{else}}
+                    Login or Sign-up &raquo;
+                {{/if}}
+            {{/link-to}}
+        </p>
     </div>
 </div>
 

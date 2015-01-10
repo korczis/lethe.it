@@ -1,5 +1,11 @@
 <div class="row text-center">
-    <h1>Login or Sign-up</h1>
+    <h1>
+        {{#if controllers.application.user}}
+            Link Accounts
+        {{else}}
+            Login or Sign-up
+        {{/if}}
+    </h1>
 
     <a href="/auth/facebook"><img src="/img/sn/facebook_128.png" id="authFacebookLink"/></a>
     <a href="/auth/github"><img src="/img/sn/github_128.png" id="authGithubLink"/></a>

@@ -27,6 +27,7 @@
 
     define(deps, function (Ember, App) {
         App.AuthController = Ember.Controller.extend({
+            needs: ['application'],
             user: null
         });
 

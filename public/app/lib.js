@@ -65,6 +65,10 @@
         'routes/privacy/privacyRoute',
         'routes/privacy/privacyView',
 
+        'routes/profile/profileController',
+        'routes/profile/profileRoute',
+        'routes/profile/profileView',
+
         'routes/stream/streamRoute',
         'routes/stream/streamView',
         
