@@ -40,6 +40,7 @@
                             if(data && data.user && data.user.id != 'guest') {
                                 var user = self.store.find('user', data.user.id);
                                 self.controllerFor('auth').set('user', user);
+                                self.transitionTo('stream');
                                 return resolve(user);
                             }
 
