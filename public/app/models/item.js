@@ -30,6 +30,9 @@
 
         App.Item = DS.Model.extend({
             source: attr(),
+            sourceId: attr(),
+            sourceUri: attr(),
+            imageUri: attr(),
             title: attr(),
             description: attr(),
             raw: attr('raw')

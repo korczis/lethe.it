@@ -14,7 +14,17 @@
             <ul>
                 {{#each item in controller.model}}
                     <li>
-                        {{item.title}}
+
+                        {{#if item.imageUri}}
+                            <img class="thumbnail" {{bind-attr src=item.imageUri}}  height="50" width="50" />
+                        {{/if}}
+
+                        {{#if item.sourceUri}}
+                            <a {{bind-attr href="item.sourceUri"}} target="_blank">{{item.title}}</a>
+                        {{else}}
+                            {{item.title}}
+                        {{/if}}
+
                         {{#if item.description}}
                             - {{item.description}}
                         {{/if}}
