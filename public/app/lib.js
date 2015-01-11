@@ -46,6 +46,7 @@
         'socket/initializer',
 
         // Models
+        'models/item',
         'models/user',
 
         // Routes

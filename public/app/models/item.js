@@ -28,13 +28,14 @@
     define(deps, function (App, DS) {
         var attr = DS.attr;
 
-        App.User = DS.Model.extend({
-            name: attr(),
-            facebook: attr('raw'),
-            github: attr('raw'),
-            twitter: attr('raw')
+        App.Item = DS.Model.extend({
+            source: attr(),
+            title: attr(),
+            description: attr(),
+            raw: attr('raw')
         });
 
-        return App.User;
+        return App.Item;
+
     });
 })(this);

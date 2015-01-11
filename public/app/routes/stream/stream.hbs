@@ -1,3 +1,26 @@
-<div class="row text-center">
-    <h1>Stream</h1>
+<div class="container">
+    <div clas="row">
+        <h1>Stream</h1>
+    </div>
+
+    <div clas="row">
+        <input type="text" class="form-control" placeholder="Search for...">
+    </div>
+
+    <br/>
+
+    <div class="row">
+        <div>
+            <ul>
+                {{#each item in controller.model}}
+                    <li>
+                        {{item.title}}
+                        {{#if item.description}}
+                            - {{item.description}}
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>

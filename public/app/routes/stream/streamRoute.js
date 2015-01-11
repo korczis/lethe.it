@@ -27,6 +27,13 @@
 
     define(deps, function (Ember, App) {
         App.StreamRoute = Ember.Route.extend({
+            model: function() {
+                return this.store.find('item');
+            },
+
+            setupController: function(controller, model) {
+                controller.set('model', model);
+            }
         });
 
         return App.StreamRoute;
