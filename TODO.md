@@ -10,8 +10,8 @@
   - [x] Twitter
 - [ ] JSDoc
 - [ ] Views
-  - [ ] Privacy
-  - [ ] ToS
+  - [x] Privacy Policy
+  - [ ] Terms of Service
   - [ ] Search
   - [ ] Categorization
   - [ ] Classification
