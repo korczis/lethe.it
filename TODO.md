@@ -9,12 +9,17 @@
   - [x] Github
   - [x] Twitter
 - [ ] JSDoc
+- [ ] Adapters
+  - [x] Facebook 
+  - [ ] Github
+  - [ ] Twitter
 - [ ] Views
   - [x] Privacy Policy
   - [ ] Terms of Service
   - [ ] Search
   - [ ] Categorization
   - [ ] Classification
+  - [ ] Pagination
 - [ ] Server modularization
   - [x] routes
   - [x] auth
