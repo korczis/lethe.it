@@ -1,21 +1,30 @@
 # TODO
 
 - [ ] Merging config environments
+  - [x] Hand crafted merging
+  - [ ] Automated merging
 - [ ] Passing config to client
 - [ ] Auth 
   - [x] Facebook
   - [x] Github
   - [x] Twitter
 - [ ] JSDoc
-
-## Raw
-
-- [ ] Privacy, ToS
-- [ ] Views for - Search, Categorization, Classification
-- [ ] Auth using Facebook, Twitter, ...
-- [ ] lethe.it nodejs server modularization - routes, auth ...
-- [ ] Support for config environments - dev, test, production
-- [ ] Logger - client/server (+ views integration in lethe.it)
+- [ ] Views
+  - [ ] Privacy
+  - [ ] ToS
+  - [ ] Search
+  - [ ] Categorization
+  - [ ] Classification
+- [ ] Server modularization
+  - [x] routes
+  - [x] auth
+- [ ] Support for config environments 
+  - [x] Development
+  - [x] Test
+  - [x] Production
+- [ ] Logger
+  - [ ] client - views
+  - [ ] server - backend storage
 - [ ] "Service routes"
   - [ ] config - /config - for config settings sharing 
   - [ ] session - /session - for session inspection
@@ -25,9 +34,9 @@
   - [ ] Unit tests
   - [ ] Integration tests
 - [ ] Configurable session store 
-  - [ ] CouchDB
+  - [x] CouchDB
   - [ ] CouchBase
-  - [ ] Mongo
+  - [x] Mongo
   - [ ] (PostgreSQL ???)
 - [ ] Gulp 
   - [ ] production optimization - vendor.js, bundle.js, vendor.css, bundle.css
