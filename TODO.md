@@ -2,7 +2,10 @@
 
 - [ ] Merging config environments
 - [ ] Passing config to client
-- [ ] Auth - Facebook, Twitter
+- [ ] Auth 
+  - [x] Facebook
+  - [x] Github
+  - [x] Twitter
 - [ ] JSDoc
 
 ## Raw
