@@ -14,6 +14,9 @@
   - [x] Facebook 
   - [ ] Github
   - [ ] Twitter
+  - [ ] RSS Generic
+    - [ ] http://servis.idnes.cz/rss.aspx?c=zpravodaj
+    - [ ] http://www.reddit.com/.rss
 - [ ] Views
   - [x] Privacy Policy
   - [ ] Terms of Service
