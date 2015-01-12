@@ -8,8 +8,9 @@
   - [x] Facebook
   - [x] Github
   - [x] Twitter
-- [ ] JSDoc
 - [ ] Adapters
+  - [ ] Shared
+     - [ ] Remember last sync date
   - [x] Facebook 
   - [ ] Github
   - [ ] Twitter
@@ -35,13 +36,15 @@
   - [ ] session - /session - for session inspection
   - [ ] limits - /limits - for API throttling limits
 - [ ] HTTPS Certificate for lethe.it
-- [ ] Tests
-  - [ ] Unit tests
-  - [ ] Integration tests
 - [ ] Configurable session store 
   - [x] CouchDB
   - [ ] CouchBase
   - [x] Mongo
   - [ ] (PostgreSQL ???)
-- [ ] Gulp 
-  - [ ] production optimization - vendor.js, bundle.js, vendor.css, bundle.css
+- [ ] Tooling & Integration
+  - [ ] JSDoc
+  - [ ] Gulp 
+    - [ ] production optimization - vendor.js, bundle.js, vendor.css, bundle.css
+  - [ ] Tests
+    - [ ] Unit tests
+    - [ ] Integration tests
