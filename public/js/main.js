@@ -39,6 +39,8 @@
 
         baseUrl: '/app',
 
+        waitSeconds: 0,
+
         paths: {
             'bootstrap': '/components/bootstrap/dist/js/bootstrap',
             'handlebars': '/components/handlebars/handlebars',
