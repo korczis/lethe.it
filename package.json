@@ -58,7 +58,8 @@
     "passport-github": "^0.1.5",
     "inflection": "^1.5.3",
     "fbgraph": "^0.3.0",
-    "mongoose-timestamp": "^0.3.0"
+    "mongoose-timestamp": "^0.3.0",
+    "spdy": "^1.29.2"
   },
   "devDependencies": {
     "mocha": "^1.18.2",
