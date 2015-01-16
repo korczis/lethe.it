@@ -1,36 +1,34 @@
-<div class="container">
-    <div clas="row">
-        <h1>Stream</h1>
-    </div>
+<div clas="row">
+    <h1>Stream</h1>
+</div>
 
-    <div clas="row">
-        <input type="text" class="form-control" placeholder="Search for...">
-    </div>
+<div clas="row">
+    <input type="text" class="form-control" placeholder="Search for...">
+</div>
 
-    <br/>
+<br/>
 
-    <div class="row">
-        <div>
-            <ul>
-                {{#each item in controller.model}}
-                    <li>{{#if item.sourceUri}}
-                            <a {{bind-attr href="item.sourceUri"}} target="_blank">{{item.title}}</a>
-                        {{else}}
-                            {{item.title}}
-                        {{/if}}
+<div class="row">
+    <div>
+        <ul>
+            {{#each item in controller.model}}
+                <li>{{#if item.sourceUri}}
+                    <a {{bind-attr href="item.sourceUri"}} target="_blank">{{item.title}}</a>
+                {{else}}
+                    {{item.title}}
+                {{/if}}
 
-                        {{#if item.description}}
-                            - {{item.description}}
-                        {{/if}}
+                    {{#if item.description}}
+                        - {{item.description}}
+                    {{/if}}
 
-                        {{#if item.imageUri}}
-                            <a {{bind-attr href="item.sourceUri"}} target="_blank">
-                                <img class="thumbnail" {{bind-attr src=item.imageUri}}  height="50" width="50">
-                            </a>
-                        {{/if}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+                    {{#if item.imageUri}}
+                        <a {{bind-attr href="item.sourceUri"}} target="_blank">
+                            <img class="thumbnail" {{bind-attr src=item.imageUri}}  height="50" width="50">
+                        </a>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
     </div>
 </div>
