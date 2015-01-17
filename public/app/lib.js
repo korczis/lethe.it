@@ -20,13 +20,15 @@
 
 (function (global) {
 
-    var deps = [
+    var coreDeps = [
         // Core compatibility
         'plugins',
 
         // Core libraries
-        'bootstrap',
+        'bootstrap'
+    ];
 
+    var appDeps = [
         // Application
         'app',
         'router',
@@ -72,12 +74,18 @@
 
         'routes/stream/streamRoute',
         'routes/stream/streamView',
-        
+
         'routes/tos/tosRoute',
         'routes/tos/tosView'
     ];
 
+    var deps = [].concat(coreDeps, appDeps);
+
     define(deps, function () {
-        return deps;
+        return {
+            coreDeps: coreDeps,
+            appDeps: appDeps,
+            allDeps: deps
+        };
     });
 })(this);
